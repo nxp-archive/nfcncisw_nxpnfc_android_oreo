@@ -1,0 +1,23 @@
+diff --git a/nci/jni/NativeNfcManager.cpp b/nci/jni/NativeNfcManager.cpp
+old mode 100755
+new mode 100644
+index a0ee86d..eb9ad10
+--- a/nci/jni/NativeNfcManager.cpp
++++ b/nci/jni/NativeNfcManager.cpp
+@@ -2942,6 +2942,7 @@ static void nfcManager_enableDiscovery (JNIEnv* e, jobject o, jint technologies_
+         }
+     }
+     // Actually start discovery.
++    usleep(100*1000);
+     startRfDiscovery (true);
+     sDiscoveryEnabled = true;
+ 
+@@ -8587,7 +8588,7 @@ Transcation_Check_t* nfcManager_transactionDetail(void)
+ void nfcManager_getFeatureList() {
+     tNFC_chipType chipType;// = pn553;
+     chipType = NFC_GetChipType();
+-    ALOGV("%s : chipType",__func__);
++    ALOGV("%s : chipType=%d",__func__, chipType);
+     CONFIGURE_FEATURELIST(chipType);
+ }
+ /*******************************************************************************
