@@ -5,17 +5,17 @@ echo "+++ Installing NXP-NCI NFC support for PN7150 +++"
 echo
 echo "- removing existing implementation"
 rm -rf $ANDROID_BUILD_TOP/frameworks/base/core/java/android/nfc/*
-rm -rf $ANDROID_BUILD_TOP/system/nfc/* $ANDROID_BUILD_TOP/system/nfc/.*
-rm -rf $ANDROID_BUILD_TOP/packages/apps/Nfc/* $ANDROID_BUILD_TOP/packages/apps/Nfc/.*
+rm -rf $ANDROID_BUILD_TOP/system/nfc/* $ANDROID_BUILD_TOP/system/nfc/.git
+rm -rf $ANDROID_BUILD_TOP/packages/apps/Nfc/* $ANDROID_BUILD_TOP/packages/apps/Nfc/.git
 
 echo
 echo "- copying required files"
 cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Base/core/java/android/nfc $ANDROID_BUILD_TOP/frameworks/base/core/java/android/
 cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Vendor/* $ANDROID_BUILD_TOP/
 cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_libnfcNci/* $ANDROID_BUILD_TOP/system/nfc/
-cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_libnfcNci/.* $ANDROID_BUILD_TOP/system/nfc/
+cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_libnfcNci/.git $ANDROID_BUILD_TOP/system/nfc/
 cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Nfc/* $ANDROID_BUILD_TOP/packages/apps/Nfc/
-cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Nfc/.* $ANDROID_BUILD_TOP/packages/apps/Nfc/
+cp -r $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Nfc/.git $ANDROID_BUILD_TOP/packages/apps/Nfc/
 
 echo
 echo "- removing temporary retrieved files"

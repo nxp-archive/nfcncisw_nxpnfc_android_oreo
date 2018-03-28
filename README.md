@@ -1,4 +1,4 @@
-# nxpnfc_android_nougat
+# nxpnfc_android_oreo
 
 This repository contains the files allowing to patch 8.1.0 Oreo version of AOSP source in order to add support for PN7150 NXP-NCI NFC controller to an Android based system.
 It only applies to Oreo Android versions (for other releases see appropriate repository: https://wiki.codeaurora.org/xwiki/bin/NCI+NFC+Controller+SW+resources/).
